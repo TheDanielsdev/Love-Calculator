@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    background: #3f3882;
+    font-family: 'poppins', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgb(247, 99, 197);
+    height: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em;
+    margin: 2em;
+    border-radius: 25px;
+}
+
+h2,
+span {
+    color: #30303d;
+    font-style: italic;
+}
+
+.names-wrapper {
+    height: 60%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input {
+    padding: 1em;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: bold;
+    color: rgb(247, 99, 197);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    transition: 4s;
+}
+
+input:hover,
+input:focus {
+    background: rgb(255, 255, 253);
+}
+
+.fas {
+    color: rgb(241, 20, 94);
+    font-size: 1.5rem;
+    animation: heart 5s infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.result {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+    width: 40%;
+}
+
+.display-btn {
+    padding: 1em;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: rgb(255, 255, 253);
+    background-color: rgb(241, 20, 94);
+    cursor: pointer;
+    transition: 2s;
+}
+
+.display-btn:hover {
+    background-color: rgb(243, 47, 113);
+}
+
+.love-percentage {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.noDisplay {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .container {
+        height: 736px;
+        width: 250px;
+        flex-direction: column;
+        padding: 2em;
+        margin: 2em;
+        border-radius: 25px;
+    }
+    .name1 {
+        margin-left: 20px;
+    }
+    .fas {
+        margin-bottom: -100px;
+        margin-left: -100px;
+    }
+    .name2 {
+        margin-bottom: -200px;
+        margin-left: -120px;
+    }
+    .display-btn {
+        width: 100px;
+        padding: 5px;
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .names-wrapper {
+        height: 10%;
+        margin-left: -10px;
+    }
+    .my-name {
+        font-size: 10px;
+        display: inline;
+        letter-spacing: 2px;
+    }
+}

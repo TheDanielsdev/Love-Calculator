@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator By Daniel.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="LogoMakr-3XxSLH.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container flex">
+        <h2>Enter Both Your Names To See How Much You Love Each Other</h2>
+
+        <div class="names-wrapper flex">
+            <input type="text" class="name1">
+            <i class="fas fa-heart"></i>
+            <input type="text" class="name2">
+        </div>
+
+        <section class="result flex">
+            <button class="display-btn" onclick="displayBtn()">
+            Show Results
+
+        </button>
+            <span class="love-percentage"></span>
+            <span class="my-name">Developed By Adeniran Daniel</span>
+
+        </section>
+    </div>
+
+
+
+
+    <script>
+        function displayBtn() {
+            let randomNum = Math.floor(((Math.random() * 100) + 1));
+            document.querySelector('.love-percentage').innerHTML = randomNum + "%";
+
+            document.querySelector('.display-btn').disabled = 'true';
+
+            if (document.querySelector('.name1').value == "") {
+                alert('Input Fields');
+
+                var x = document.querySelector('.love-percentage')
+
+                x.classList.add('noDisplay');
+
+
+
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
